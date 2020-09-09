@@ -7,5 +7,6 @@ def home_page_view(request):
 
 
 urlpatterns = [
-    path('home', home_page_view),
+    path('', home_page_view),
+    path('', about_page_view),
 ]
