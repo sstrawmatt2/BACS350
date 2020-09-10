@@ -1,9 +1,8 @@
-from django.views.generic import TemplateView
 from django.urls import path
-
-class HomeView(TemplateView):
-    template_name='home.html'
+from django.views.generic import TemplateView
 
 urlpatterns = [
-    path('', HomeView.as_view()),
+    path('about', TemplateView.as_view(template_name="about.html")),
+    path('home', TemplateView.as_view(template_name="home.html")),
+    path('', TemplateView.as_view(template_name="home.html")),
 ]
