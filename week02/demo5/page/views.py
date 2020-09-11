@@ -14,7 +14,7 @@ class HomeView(TemplateView):
     
     def get_context_data(self, **kwargs):
         return {
-            'title': 'My Home Page', 
+            'title': 'Sean Strawmatt Home Page', 
             'body': 'Once upon a time ...',
         }
     
