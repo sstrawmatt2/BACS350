@@ -3,10 +3,11 @@ from django.urls import path
 
 
 def home_page_view(request):
-    return HttpResponse("<h1>HOME</h1>")
+    return HttpResponse("<h1>Hello World!</h1>")
 
 def about_page_view(request):
     return HttpResponse("<h1>ABOUT</h1>")
+    
 
 
 urlpatterns = [
