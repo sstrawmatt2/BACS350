@@ -9,5 +9,5 @@ urlpatterns = [
     path('profile', ProfileView.as_view()),
     path('hulk', HulkView.as_view()),
     path('black_widow', WidowView.as_view()),
-    path('', HeroView.as_view()),
+    path('home', HeroView.as_view()),
 ]
