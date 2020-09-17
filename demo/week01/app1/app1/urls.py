@@ -11,7 +11,7 @@ def about_page_view(request):
 
 
 urlpatterns = [
-    path('home', home_page_view),
+    path('', home_page_view, name='home'),
     path('about', about_page_view),
     
     
