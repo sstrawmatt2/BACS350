@@ -1,10 +1,10 @@
-from django.urls import path
 
-from page.views import AboutView, HomeView, ProfileView
+from hero.views import AboutPage, BasePage, HeroView
+from django.urls import path
 
 urlpatterns = [
     path('', HeroView.as_view()),
-    path('about', AboutView.as_view()),
-    path('base', BaseView.as_view()),
+    path('about', AboutPage.as_view()),
+    path('base', BasePage.as_view()),
     path('<str:identity>', HeroView.as_view()),
 ]
