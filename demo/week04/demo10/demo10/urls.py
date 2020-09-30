@@ -1,4 +1,3 @@
-
 from hero.views import AboutPage, BasePage, HeroView
 from django.urls import path
 
