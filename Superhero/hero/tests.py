@@ -1,3 +1,10 @@
-from django.test import TestCase
+from django.test import SimpleTestCase
 
-# Create your tests here.
+class ViewTests(SimpleTestCase):
+
+    def test_index_view(self):
+        response = self.client.get('/')
+        self.assertEqual(response.status_code, 200)
+        
+        response = self.client.get('Superhero News')
+        self.assertEqual(response.status_code, 200)
