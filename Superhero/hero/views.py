@@ -12,7 +12,7 @@ class HeroView(TemplateView):
 class BasePage(TemplateView):
     template_name = "page_theme.html"
 
-class HomeView(TemplateView):
+class HomePage(TemplateView):
     template_name = "home.html"
     
 class AboutPage(TemplateView):
