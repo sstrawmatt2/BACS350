@@ -1,6 +1,20 @@
+<!--
+{% extends 'page_theme.html' %}
+{% block title %}Home{% endblock %}
+{% block body %}
+{% load static %}
+<h1>My Home page</h1>
+    <p>Wthis is my simple home page. Here you can navigate and see some of the coolest heroes!</p>
+
+{% endblock %}
+-->
+
+{% extends 'page_theme.html' %}
+
+
+
+{% block content %}
 <h1>Home Page</h1>
-    <p>This is my current home page for my superhero project. It
-is currently a work in progress. </p>
-<a href="about.html">About</a>
 <a href="profile.html">Profile</a>
-<a href="index.html">News</a>
+<a href="home.html">Home</a>
+{% endblock content %}
