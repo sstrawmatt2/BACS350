@@ -25,7 +25,8 @@ SECRET_KEY = 'sz5*+3+s8$mlf!dim02dv&b&0u18fs7eo06b11g4g#+ernzn)!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [stra4884.pythonanywhere.com]
+ALLOWED_HOSTS = []
+# allowed hosts might need to be stra4884.pythonanywhere.com
 
 
 # Application definition
