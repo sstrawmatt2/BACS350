@@ -18,6 +18,7 @@
 
     {% block header %}
     <header>
+<!--
         <div class="row media">
             <div class="media-body">
                 {% autoescape off %}
@@ -32,7 +33,16 @@
             <img class="m-3 rounded-circle image-fluid" src="{{ logo }}" alt="Logo" width="150">
             {% endif %}
         </div>
+-->
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'about' %}">About Page</a>
+        <a href="{% url 'batman' %}">Batman</a>
+        <a href="{% url 'cap' %}">Captain America</a>
+        <a href="{% url 'barton' %}">Hawkeye</a>
+        <a href="{% url 'hulk' %}">Hulk</a>
+        <a href="{% url 'deadshot' %}">Deadshot</a>
     </header>
+    
     {% endblock header %}
 
     {% block main %}
