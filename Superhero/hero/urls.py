@@ -13,5 +13,5 @@ urlpatterns = [
     path('barton', BartonView.as_view(), name='barton'),
     path('hulk', HulkView.as_view(), name='hulk'),
     path('deadshot', DeadshotView.as_view(), name='deadshot'),
-    
+#    path('admin/', site.urls),
 ]
