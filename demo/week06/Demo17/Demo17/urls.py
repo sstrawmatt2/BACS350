@@ -9,11 +9,13 @@ class HeroView(TemplateView):
     
     def get_context_data(self, **kwargs):
         return {
-            'title': 'My Hero View', 
-            'body': 'Heroes are awesome!',
+            'title': 'Superheroes List',
+            'name': 'Batman', 
+            'identity': 'Bruce Wayne',
+            
         }
     
     
 urlpatterns = [
-    path('', TemplateView.as_view()),
+    path('', HeroView.as_view()),
 ]
