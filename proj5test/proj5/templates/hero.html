@@ -1,3 +1,24 @@
+
+{% extends 'page_theme.html' %}
+
+{% block main %}
+   
+   <h1>Heroes Gallery</h1>
+   
+    {% for h in heroes %}
+       
+        <h2>Hero - {{ hero }}</h2>
+        <p>
+            This is the coolest hero
+        </p>
+
+        <img src="/static/images/{{hero}}.jpg" alt="{{ hero }}">
+        
+    {% endfor %}
+
+{% endblock main %}
+
+<!--
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,3 +41,10 @@
 
 </body>
 </html>
+-->
+
+
+
+
+
+
