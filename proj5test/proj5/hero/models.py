@@ -4,7 +4,7 @@ class Superhero(models.Model):
     name = models.CharField(max_length=20)
     identity = models.CharField(max_length=20)
     image = models.CharField(max_length=20, null=True)
-    # null is the default value
+    # null is the default value for the image
     
     def __str__(self):
         return self.name

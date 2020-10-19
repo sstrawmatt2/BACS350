@@ -8,16 +8,28 @@ class HeroView(TemplateView):
     
     def get_context_data(self, **kwargs):
         heroes = Superhero.objects.all()
-        return {
-            'title': 'Superhero Profile',
-            'heroes': heroes, 
-        }
+        return{'heroes': heroes, 'css': '/static/hero.css'}
+    
+#    def get_context_data(self, **kwargs):
+#        heroes = Superhero.objects.all()
+#        return {
+#            'title': 'Superhero Profile',
+#            'heroes': heroes, 
+#        }
+    
+
+
+
 class HomePage(TemplateView):
     template_name = "home.html"
     
 class AboutPage(TemplateView):
     template_name = "about.html"
 
+    
+    
+    
+    
 #
 #class HeroView(TemplateView):
 #    template_name = "hero.html"

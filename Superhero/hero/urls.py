@@ -2,12 +2,14 @@
 #from hero.views import AboutPage, BasePage, HeroView, BatmanView, CapView, BartonView, HulkView, HomePage, DeadshotView
 
 from django.urls import path
-from hero.views import HeroView 
+from hero.views import HeroView, HomePage, AboutPage 
 
 #This code is for proj6,7
 urlpatterns = [
     path('', HeroView.as_view()),
     path('<str:identity>', HeroView.as_view()),
+    path('home', HomePage.as_view(), name='home'),
+    path('about', AboutPage.as_view(), name = 'about'),
 ]
 
 

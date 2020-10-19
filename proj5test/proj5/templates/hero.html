@@ -5,14 +5,16 @@
    
    <h1>Heroes Gallery</h1>
    
-    {% for h in heroes %}
+    {% for hero in heroes %}
        
-        <h2>Hero - {{ hero }}</h2>
+        <h2>Hero - {{ hero.name }}</h2>
         <p>
-            This is the coolest hero
+            This page shows the coolest heroes!
         </p>
-
-        <img src="/static/images/{{hero}}.jpg" alt="{{ hero }}">
+        <p>
+            Secret ID: {{ hero.identity }}
+        </p>
+        <img width = "300" src="/static/images/{{ hero.name }}.jpg "alt="{{ hero.identity }}">
         
     {% endfor %}
 
