@@ -1,31 +1,18 @@
-
-#from hero.views import AboutPage, BasePage, HeroView, BatmanView, CapView, BartonView, HulkView, HomePage, DeadshotView
-
 from django.urls import path
-from hero.views import HeroView, HomePage, AboutPage 
+from hero.views import HeroAddView, HeroDetailView, HeroEditView, HeroListView 
+#from hero.views import HeroView, HomePage, AboutPage 
 
 #This code is for proj6,7
 urlpatterns = [
-    path('', HeroView.as_view()),
-    path('<str:identity>', HeroView.as_view()),
-    path('home', HomePage.as_view(), name='home'),
-    path('about', AboutPage.as_view(), name = 'about'),
-]
-
-
-# This code is without having shortcuts like in proj 6 and 7. 
-
-#urlpatterns = [
 #    path('', HeroView.as_view()),
+#    path('<str:identity>', HeroView.as_view()),
 #    path('home', HomePage.as_view(), name='home'),
 #    path('about', AboutPage.as_view(), name = 'about'),
-#    path('base', BasePage.as_view()),
-#    path('<str:identity>', HeroView.as_view()),
-#    path('batman', BatmanView.as_view(), name='batman'),
-#    path('cap', CapView.as_view(), name='cap'),
-#    path('barton', BartonView.as_view(), name='barton'),
-#    path('hulk', HulkView.as_view(), name='hulk'),
-#    path('deadshot', DeadshotView.as_view(), name='deadshot'),
-##    path('admin/', site.urls),
-#]
+    path('', HeroListView.as_view(), name='hero_list'),
+    path('<int:pk>', HeroDetailView.as_view(), name='hero_detail'),
+    path('add', HeroAddView.as_view(), name='hero_add'), 
+    path('<int:pk>/', HeroEditView.as_view(), name='hero_edit'),
+]
+ 
+
 
