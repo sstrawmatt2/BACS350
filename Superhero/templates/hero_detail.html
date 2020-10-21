@@ -1,16 +1,22 @@
 {% extends 'page_theme.html' %}
 
 {% block main %}
-<a href="/">Hero List</a>
-   
-<h1>Hero Profile</h1>
-<p>
-    Hero Name: {{ object.name }}
-</p>
-<p>
-    Secret Identify: {{ object.identity }}
-</p>
-<img width = "300" src="/static/images/{{ object.name }}.jpg "alt="{{ object.identity }}">
-        
 
+<div class="container">
+    
+
+    <a href="/"class="btn btn-primary">Hero List</a>
+      <a href="add" class="btn btn-primary">Add</a>
+      <a href="{{ object.pk }}/" class="btn btn-primary">Edit</a>
+
+    <h1>Hero Profile</h1>
+    <p>
+        Hero Name: {{ object.name }}
+    </p>
+    <p>
+        Secret Identify: {{ object.identity }}
+    </p>
+    <img width = "300" src="/static/images/{{ object.name }}.jpg "alt="{{ object.identity }}">
+        
+</div>
 {% endblock main %}
