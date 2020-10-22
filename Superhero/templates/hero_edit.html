@@ -1,21 +1,27 @@
-
 {% extends 'page_theme.html' %}
 
 {% load crispy_forms_tags %}
 
-{% block main %}
- 
-  <div class="container">
-      
-    <h1>Edit Hero</h1>
+{% block content %}
+   <div class="container">
     
+<!--# if you're edititng, you get 'edit hero' else you get 'add new hero'            -->
+    {% if edit %}
+        <h1>Edit Hero</h1>
+    {% else %}
+        <h1>Add New Hero</h1>
+    {% endif %}
+
     <form action="" method="post">{% csrf_token %}
-    
-        <!-- Without Crispy Forms {{ form.as_p }}  -->
-        
+<!--        {{ form.as_p }}-->
         {{ form|crispy }}
-       
         <button class="btn btn-success" type="submit">Save</button>
+<!--        <input type="submit" value="Save">-->
     </form>
+    </div>
     
-   </div>
+
+{% endblock content %}
+
+
+<!--this is a form that adds both edit and add a hero. This could also be done in two different files if you wanted to. -->
