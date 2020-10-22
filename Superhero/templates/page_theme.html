@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{ page_title }}</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" 
+    href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
     
     <link rel="stylesheet" href="/static/hero.css">
     
@@ -17,7 +19,7 @@
     {% block content %}
 
     {% block header %}
-    <header class="bg-dark p-3">
+    <header class="bg-dark p-3 mb-5">
         <div class="row media">
             <div class="media-body">
                 {% autoescape off %}
@@ -28,11 +30,10 @@
 <!--                {% endautoescape %}-->
 
             </div>
-<!--
-            {% if logo %}
-            <img class="m-3 rounded-circle image-fluid" src="{{ logo }}" alt="Logo" width="150">
-            {% endif %}
--->
+            <div class="text-right">
+                <i class="fa fa-user fa-2x"></i>
+            </div>
+<!--            This is an icon-->
         </div>
     </header>
     
