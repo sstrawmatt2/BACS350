@@ -3,8 +3,10 @@
 
 {% block main %}
    
+<!--
    <a href="/home">Home</a>
    <a href="/about">About Page</a>
+-->
    <h1>Heroes Gallery</h1>
    <p>
         This page shows the coolest heroes!
@@ -21,64 +23,7 @@
     {% endfor %}
 
 {% endblock main %}
-<!--
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-    <link rel="stylesheet" href="unc.css">
-</head>
-<body>
 
-    <a href="/home">Home</a>
-    <a href="/about">About Page</a>
-    
-    <h1>{{ title }}</h1>
-    <p>List of Heroes</p>
-    
-    {% for h in heroes %}
-    <h2>{{ h.name }}</h2>
-    <p>Name: <b>{{ h.name }}</b></p>
-    <p>Secret ID: <b>{{ h.identity }}</b></p>
-    <p>Image: {{ h.image }}</p>
-    {% endfor %}
-
-</body>
-</html>
--->
-
-
-
-<!--
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Superheros</title>
-    <link rel="stylesheet" href="hero.css">
-</head>
-<body>
-    <h2>Superhero Project</h2>
-    <nav>
-        <a href="/home">Home</a>
-        <a href="/about">About Page</a>
-        <a href="/batman">Batman</a>
-        <a href="/cap">Captain America</a>
-        <a href="/barton">Hawkeye</a>
-        <a href="/hulk">Hulk</a>
-        <a href="/deadshot">Deadshot</a>
-    </nav>
-    <p>
-        <img src="/static/images/{{hero}}.jpg" alt="{{ hero }}">
-    </p>
-</body>
-</html>
--->
-
-
-
-<!--
 
 
 

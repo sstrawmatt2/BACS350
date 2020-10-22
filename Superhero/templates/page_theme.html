@@ -17,20 +17,22 @@
     {% block content %}
 
     {% block header %}
-    <header>
+    <header class="bg-dark p-3">
         <div class="row media">
             <div class="media-body">
                 {% autoescape off %}
                 <h1 class="display-4 ml-5">
-                    <a href="{{ site_url }}">{{ site_title }}</a>
+                    <a href="/" class="text-light">Heroes</a>
                 </h1>
-                <h2 class="display-6 ml-5">{{ site_subtitle }}</h2>
-                {% endautoescape %}
+                <h2 class="display-6 ml-5">My Favorite Heroes</h2>
+<!--                {% endautoescape %}-->
 
             </div>
+<!--
             {% if logo %}
             <img class="m-3 rounded-circle image-fluid" src="{{ logo }}" alt="Logo" width="150">
             {% endif %}
+-->
         </div>
     </header>
     
