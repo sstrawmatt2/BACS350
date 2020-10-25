@@ -1,6 +1,7 @@
 from django.views.generic import DetailView, ListView,TemplateView
 from django.views.generic.edit import CreateView, UpdateView
 from hero.models import Superhero
+from os.path import exists
 
      
         
@@ -13,11 +14,16 @@ class HeroDetailView(DetailView):
     template_name = "hero_detail.html"
     model = Superhero  
     
+#    def get_context_data(self, **kwargs):
+#        kwargs = super().get_context_data(self, **kwargs)
+#        image = kwargs['object']
+#        if not exists('static/' + image):
+#        return {'no_image': image}
+    
 class HeroEditView(UpdateView):
     template_name = "hero_add.html"
     model = Superhero
-    fields = '__all__'
-    
+    fields = '__all__'   
     
     def get_context_data2(self, **kwargs):
         kwargs = super(HeroEditView, self).get_context_data(**kwargs)
