@@ -18,7 +18,8 @@ class HeroEditView(UpdateView):
     model = Superhero
     fields = '__all__'
     
-    def get_context_data(self, **kwargs):
+    
+    def get_context_data2(self, **kwargs):
         kwargs = super(HeroEditView, self).get_context_data(**kwargs)
         kwargs['edit'] = True
         return kwargs
@@ -37,9 +38,7 @@ class HeroListView(ListView):
 ##    template_name="hero.html"
 #    template_name="hero.html"
 #    
-#    def get_context_data(self, **kwargs):
-#        heroes = Superhero.objects.all()
-#        return{'heroes': heroes, 'css': '/static/hero.css'}
+#   
 #    
 #        error was thrown on server saying "Superhero matching query does not exist" when I use the hero_detail.html
 
