@@ -10,7 +10,28 @@
     <a href="/"class="btn btn-primary">Hero List</a>
       <a href="add" class="btn btn-primary">Add</a>
       <a href="{{ object.pk }}/" class="btn btn-primary">Edit</a>
-
+      <div class="card m-5">
+          <div class="card-header">
+              <h2>Hero -
+                  <a href="{{ hero.pk }}">Hero: {{ object.name }}</a>
+              </h2>
+          </div>
+          <div class="card-body">
+             <a href="{{ hero.pk }}/" class="btn btn-primary">Edit {{ object.name }}</a>
+             <p>
+                 This page shows my favorite hero. 
+             </p>
+             <p>
+                 Secret ID: {{ object.identity }}
+             </p>
+             <pre>IMAGE: {{ object.image }}</pre>
+             {% if missing %}
+             <p><i class = "fa fa-user fa-6x"></i></p>
+             {% endif %}
+              <img width = "300" src="/static/images/{{ object.name }}.jpg "alt="{{ object.identity }}">
+          </div>
+      </div>
+<!--
     <h1>Hero Profile</h1>
     <p>
         Hero Name: {{ object.name }}
@@ -21,6 +42,7 @@
     <img width = "300" src="/static/images/{{ object.name }}.jpg "alt="{{ object.identity }}">
     
     </div>
+-->
         
 </div>
 {% endblock main %}
