@@ -1,0 +1,10 @@
+{% extends 'superhero_theme.html'%}
+{% load static %}
+
+{% block main %}
+    <h1>Delete Hero</h1>
+    <form action="" method="post">{% csrf_token %}
+      <p>Are you 100% sure you want to delete? "{{ object.name }}" ?</p>
+      <input type="submit" value="Confirm">
+    </form>
+{% endblock main %}

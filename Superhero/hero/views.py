@@ -1,3 +1,4 @@
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import DetailView, ListView,TemplateView
 from django.views.generic.edit import CreateView, UpdateView
 from hero.models import Superhero
@@ -5,7 +6,7 @@ from os.path import exists
 
      
         
-class HeroAddView(CreateView):
+class HeroAddView(LoginRequiredMixin, CreateView):
     template_name = "hero_add.html"
     model = Superhero 
     fields = '__all__'
@@ -20,7 +21,7 @@ class HeroDetailView(DetailView):
 #        if not exists('static/' + image):
 #        return {'no_image': image}
     
-class HeroEditView(UpdateView):
+class HeroEditView(LoginRequiredMixin, UpdateView):
     template_name = "hero_add.html"
     model = Superhero
     fields = '__all__'   
@@ -34,6 +35,11 @@ class HeroListView(ListView):
     template_name = "hero_list.html"
     model = Superhero
     
+class HeroDeleteView(LoginRequiredMixin, DeleteView):
+    template_name = "hero_delete.html"
+    model = Superhero
+    success_url = reverse_lazy('hero')
+
     
     
     
