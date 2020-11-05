@@ -15,11 +15,21 @@ class HeroDetailView(DetailView):
     template_name = "hero_detail.html"
     model = Superhero  
     
-#    def get_context_data(self, **kwargs):
-#        kwargs = super().get_context_data(self, **kwargs)
-#        image = kwargs['object']
-#        if not exists('static/' + image):
-#        return {'no_image': image}
+    #This method is responsible for checking if there is an image. If there is not an image,
+    #then the user icon will display where the image is at. 
+    def get_context_data(self, **kwargs):
+        kwargs = super().get_context_data(**kwargs)
+        image = kwargs['object'].image
+        if not exists('static/' + image):
+            kwargs['missing'] = True
+        return kwargs
+    
+#    This method will only work for a few images. It works for 2 heroes
+#    then throws up an error about get context data. It has an issue with
+#    what is going on in line 21. 
+    
+        
+
     
 class HeroEditView(UpdateView):
     template_name = "hero_add.html"
