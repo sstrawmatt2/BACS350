@@ -20,8 +20,10 @@ class HeroDetailView(DetailView):
     def get_context_data(self, **kwargs):
         kwargs = super().get_context_data(**kwargs)
         image = kwargs['object'].image
-        if not exists('static/' + image):
+        image = f'static/images/{image}.jpg'
+        if not exists(image):
             kwargs['missing'] = True
+        kwargs['image'] = image
         return kwargs
     
 #    This method will only work for a few images. It works for 2 heroes

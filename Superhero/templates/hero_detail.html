@@ -24,25 +24,15 @@
              <p>
                  Secret ID: {{ object.identity }}
              </p>
-             <pre>IMAGE: {{ object.image }}</pre>
+             <pre>IMAGE: {{ image }}</pre>
+             <pre>{{ missing }}</pre>
              {% if missing %}
              <p><i class = "fa fa-user fa-6x"></i></p>
              {% endif %}
-              <img width = "300" src="/static/images/{{ object.name }}.jpg "alt="{{ object.identity }}">
+              <img width = "300" src="/static/images/{{ object.image }}.jpg "alt="{{ object.identity }}">
           </div>
       </div>
-<!--
-    <h1>Hero Profile</h1>
-    <p>
-        Hero Name: {{ object.name }}
-    </p>
-    <p>
-        Secret Identity: {{ object.identity }}
-    </p>
-    <img width = "300" src="/static/images/{{ object.name }}.jpg "alt="{{ object.identity }}">
-    
-    </div>
--->
+
         
 </div>
 {% endblock main %}
