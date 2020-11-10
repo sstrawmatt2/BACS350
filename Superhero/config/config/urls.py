@@ -1,5 +1,6 @@
 from django.urls import path
 from hero.views import HeroAddView, HeroDetailView, HeroEditView, HeroListView 
+from django.urls import path, include
 #from hero.views import HeroView, HomePage, AboutPage 
 
 #This code is for proj6,7
@@ -13,4 +14,5 @@ urlpatterns = [
     path('add', HeroAddView.as_view(), name='hero_add'), 
     path('<int:pk>/', HeroEditView.as_view(), name='hero_edit'),
     path('<int:pk>/', HeroDeleteView.as_view(), name='hero_delete'),
+    path('', include('accounts.urls')),
 ]
