@@ -34,28 +34,21 @@ class HeroDetailView(DetailView):
 
     
 class HeroEditView(UpdateView):
-    template_name = "hero_add.html"
+    template_name = "hero_edit.html"
     model = Superhero
     fields = '__all__'   
     
-    def get_context_data2(self, **kwargs):
-        kwargs = super(HeroEditView, self).get_context_data(**kwargs)
-        kwargs['edit'] = True
-        return kwargs
+#    def get_context_data2(self, **kwargs):
+#        kwargs = super(HeroEditView, self).get_context_data(**kwargs)
+#        kwargs['edit'] = True
+#        return kwargs
 
 class HeroListView(ListView):
     template_name = "hero_list.html"
     model = Superhero
     
     
-class HeroDeleteView(LoginRequiredMixin, DeleteView):
-    template_name = "hero_delete.html"
-    model = Superhero
-    success_url = reverse_lazy('hero_list')
-    
-    def form_valid(self, form):
-        form.instance.author_id = self.request.user.pk
-        return super().form_valid(form)
+
     
 
     

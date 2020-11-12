@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'hero',
     'crispy_forms',
+    'accounts',
 
 ]
 
@@ -122,10 +123,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = ['static']
+STATICFILES_DIRS = [str(BASE_DIR.joinpath('static'))]
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 #STATICFILES_DIRS = [str(BASE_DIR.joinpath('static'))]
 
-#LOGIN_REDIRECT_URL = 'hero'
-#LOGOUT_REDIRECT_URL = 'hero'
+LOGIN_REDIRECT_URL = 'hero'
+LOGOUT_REDIRECT_URL = 'hero'

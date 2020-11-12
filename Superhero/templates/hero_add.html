@@ -9,11 +9,9 @@
    <div class="container">
     
 <!--# if you're edititng, you get 'edit hero' else you get 'add new hero'            -->
-    {% if edit %}
-        <h1>Edit Hero</h1>
-    {% else %}
-        <h1>Add New Hero</h1>
-    {% endif %}
+    
+    <h1>Add New Hero</h1>
+    
 
     <form action="" method="post">{% csrf_token %}
 <!--        {{ form.as_p }}-->
