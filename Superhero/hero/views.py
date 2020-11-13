@@ -53,6 +53,10 @@ class HeroDeleteView(LoginRequiredMixin, DeleteView):
     model = Superhero
     success_url = reverse_lazy('hero_list')
     
+#    def test_delete_function(self):
+#        obj = self.get_object()
+#        retur
+    
 
     
     
