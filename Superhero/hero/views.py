@@ -33,10 +33,14 @@ class HeroDetailView(DetailView):
         
 
     
-class HeroEditView(UpdateView):
+class HeroEditView(LoginRequiredMixin, UpdateView):
     template_name = "hero_edit.html"
     model = Superhero
-    fields = '__all__'   
+    fields = '__all__'
+    
+    def form_valid(self, form):
+        form.instance.author_id = self.request.user.pk
+        return super().form_valid(form)
     
 #    def get_context_data2(self, **kwargs):
 #        kwargs = super(HeroEditView, self).get_context_data(**kwargs)
@@ -55,7 +59,7 @@ class HeroDeleteView(LoginRequiredMixin, DeleteView):
     
 #    def test_delete_function(self):
 #        obj = self.get_object()
-#        retur
+#        return obj.author == self.request.user
     
 
     
