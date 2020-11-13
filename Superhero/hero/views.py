@@ -48,7 +48,10 @@ class HeroListView(ListView):
     model = Superhero
     
     
-
+class HeroDeleteView(LoginRequiredMixin, DeleteView):
+    template_name = "hero_delete.html"
+    model = Superhero
+    success_url = reverse_lazy('hero_list')
     
 
     
