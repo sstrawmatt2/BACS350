@@ -60,6 +60,16 @@ class HeroDeleteView(LoginRequiredMixin, DeleteView):
 #    def test_delete_function(self):
 #        obj = self.get_object()
 #        return obj.author == self.request.user
+
+
+
+class CardView(TemplateView):
+    template_name = 'hero_card.html'
+    
+    
+    def get_context_data(self, **kwargs):
+        data = dict(title="Test Hero Card", body=text)
+        return dict(card=data)
     
 
     
