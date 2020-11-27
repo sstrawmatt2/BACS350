@@ -7,6 +7,10 @@ from os.path import exists
 
      
         
+class HomeView(TemplateView):
+    template_name='home.html'
+    
+    
 class HeroAddView(LoginRequiredMixin, CreateView):
     template_name = "hero_add.html"
     model = Superhero 
@@ -70,6 +74,20 @@ class CardView(TemplateView):
     def get_context_data(self, **kwargs):
         data = dict(title="Test Hero Card", body=text)
         return dict(card=data)
+
+
+class DocumentView(TemplateView):
+    template_name='markdown.html'
+    
+    def get_context_data(self, **kwargs):
+        doc = kwargs.get('doc', "README.MD")
+        return markdown_file_data(doc)
+    
+class TableView(TemplateView):
+    template_name='_table.html'
+    
+    def get_context_data(self, **kwargs):
+        return dict(table=table_data('lessons.csv'))
     
 
     
