@@ -8,9 +8,9 @@
    <div class="text-center">
     
     <a href="/"class="btn btn-primary">Hero List</a>
-      <a href="add" class="btn btn-primary">Add</a>
+      
       <a href="{{ object.pk }}/" class="btn btn-primary">Edit</a>
-<!--      <a href="hero_delete.html" class="btn btn-primary">Delete</a>-->
+      <a href="hero_delete.html" class="btn btn-primary">Delete</a>
       <div class="card m-5">
           <div class="card-header">
               <h2>Hero -
@@ -24,6 +24,12 @@
              </p>
              <p>
                  Secret ID: {{ object.identity }}
+             </p>
+             <p>
+                 Power: {{ object.power }}
+             </p>
+             <p>
+                 Weakness: {{ object.weakness }}
              </p>
              <pre>IMAGE: {{ image }}</pre>
              <pre>{{ missing }}</pre>
