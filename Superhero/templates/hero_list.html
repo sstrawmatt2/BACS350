@@ -9,7 +9,7 @@
         This page shows the coolest heroes!
    </p>
    <ul>
-       <li><a href="home">Home Page</a></li>
+<!--       <a href="home.html"class="btn btn-primary">Home</a>-->
        <li><a href="hero_card">Cards View</a></li>
        <li><a href="markdown">Document View</a></li>
    </ul>
@@ -28,21 +28,15 @@
               
           </div>
           <div class="card-body bg-dark text-light">
-<!--              <a href="{{ hero.pk }}/"class="btn btn-primary">Edit {{ hero }}</a>-->
               <p>
                   Secret ID: {{ hero.identity }}
               </p>
               <img width = "300" src="/static/images/{{ hero.name }}.jpg "alt="{{ hero.identity }}">
-<!--              <img width="300" src="/static/{{ hero.image }}" alt="{{ hero.identity }}">-->
              
-<!--             think about putting an accordian view in here to show all of the heroes. -->
               
               
           </div>
       </div>
-       
-        
-       
         
     {% endfor %}
     </div>

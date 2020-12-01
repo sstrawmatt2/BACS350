@@ -9,7 +9,6 @@
             <form action="" method="post">{% csrf_token %}
                 <p>Are you sure you want to delete "{{ object.identity }}"?</p>
                 <button class="btn btn-success" type="submit">Delete</button>
-                <button onclick="window.history.back();" class="btn btn-default" type="button">Cancel</button>
             </form>
             
         </div>
