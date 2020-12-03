@@ -4,8 +4,8 @@ from django.urls import reverse
 class Superhero(models.Model):
     name = models.CharField(max_length=20)
     identity = models.CharField(max_length=20)
-    power = models.CharField(max_length=20)
-    weakness = models.CharField(max_length=20)
+#    power = models.CharField(max_length=20)
+#    weakness = models.CharField(max_length=20)
     image = models.CharField(max_length=200, null=True)
     # null is the default value
     
