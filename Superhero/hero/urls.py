@@ -13,4 +13,5 @@ urlpatterns = [
     path('<int:pk>/delete/', HeroDeleteView.as_view(), name='hero_delete'),
     path('', include('accounts.urls')),
     path('', include('workshop.urls')),
+    path('', include('blog.urls')),
 ] 

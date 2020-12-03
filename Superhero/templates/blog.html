@@ -1,0 +1,16 @@
+
+{% extends 'blog_theme.html' %}
+
+{% block main %}
+ 
+     <a href="{% url 'post_add' %}">Add an article about your favorite hero</a>
+      {% for post in object_list %}
+            <div class="post-entry">
+                 
+                  <h2><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></h2>
+                  <p>{{ post.body }}</p>
+                  
+            </div>
+      {% endfor %}
+  
+{% endblock main %}
