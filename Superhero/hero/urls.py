@@ -5,7 +5,6 @@ from django.contrib import admin
 
 urlpatterns = [
     path('', HomeView.as_view(template_name='home.html')),
-#    path('workshop', include('workshop.urls')),
     path('hero_list', HeroListView.as_view(), name='hero_list'),
     path('hero_card', TemplateView.as_view(template_name='hero_card')),
     path('<int:pk>', HeroDetailView.as_view(), name='hero_detail'),

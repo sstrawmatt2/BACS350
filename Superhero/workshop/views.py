@@ -1,3 +1,4 @@
+from django.shortcuts import render
 from django.views.generic import TemplateView
 
 from .workshop import card_data, cards_data, markdown_file_data
