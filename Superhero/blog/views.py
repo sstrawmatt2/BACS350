@@ -31,4 +31,8 @@ class BlogUpdateView(UpdateView):
 class BlogDeleteView(DeleteView): # new
     model = Post
     template_name = 'post_delete.html'
-    success_url = reverse_lazy('home')
+    success_url = reverse_lazy('post_list')
+    
+    def form_valid(self, form):
+        form.instance.author_id = self.request.user.pk
+        return super().form_valid(form)

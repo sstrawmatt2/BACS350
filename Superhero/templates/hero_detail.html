@@ -10,7 +10,7 @@
     <a href="/hero_list"class="btn btn-primary">Hero List</a>
       
       <a href="{{ object.pk }}/" class="btn btn-primary">Edit</a>
-      <a href="hero_delete.html" class="btn btn-primary">Delete</a>
+      <a href="hero_delete/{{ object.pk }}/" class="btn btn-primary">Delete {{ object.name }}</a> 
       <div class="card m-5">
           <div class="card-header">
               <h2>Hero -

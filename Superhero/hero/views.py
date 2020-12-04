@@ -12,7 +12,7 @@ class HomeView(TemplateView):
     
     
 class HeroAddView(LoginRequiredMixin, CreateView):
-    template_name = "hero_add.html"
+    template_name = 'hero_add.html'
     model = Superhero 
     fields = '__all__'
     
@@ -21,7 +21,7 @@ class HeroAddView(LoginRequiredMixin, CreateView):
         return super().form_valid(form)
     
 class HeroDetailView(DetailView):
-    template_name = "hero_detail.html"
+    template_name = 'hero_detail.html'
     model = Superhero  
     
     #This method is responsible for checking if there is an image. If there is not an image,
@@ -38,7 +38,7 @@ class HeroDetailView(DetailView):
 
     
 class HeroEditView(LoginRequiredMixin, UpdateView):
-    template_name = "hero_edit.html"
+    template_name = 'hero_edit.html'
     model = Superhero
     fields = '__all__'
     
@@ -61,6 +61,9 @@ class HeroDeleteView(LoginRequiredMixin, DeleteView):
     model = Superhero
     success_url = reverse_lazy('hero_list')
     
+    def form_valid(self, form):
+        form.instance.author_id = self.request.user.pk
+        return super().form_valid(form)
 
 class CardView(TemplateView):
     template_name = 'hero_card.html'
