@@ -11,7 +11,7 @@ urlpatterns = [
     path('add', HeroAddView.as_view(), name='hero_add'), 
     path('<int:pk>/', HeroEditView.as_view(), name='hero_edit'),
     path('<int:pk>/delete/', HeroDeleteView.as_view(), name='hero_delete'),
-    path('', include('accounts.urls')),
-    path('', include('workshop.urls')),
-    path('', include('blog.urls')),
+    
+##    path('', include('workshop.urls')),
+#    path('', include('blog.urls')),
 ] 
