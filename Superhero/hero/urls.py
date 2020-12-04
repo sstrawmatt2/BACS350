@@ -10,7 +10,7 @@ urlpatterns = [
     path('<int:pk>', HeroDetailView.as_view(), name='hero_detail'),
     path('add', HeroAddView.as_view(), name='hero_add'), 
     path('<int:pk>/', HeroEditView.as_view(), name='hero_edit'),
-    path('<int:pk>/delete/', HeroDeleteView.as_view(), name='hero_delete'),
+    path('delete/<int:pk>/', HeroDeleteView.as_view(), name='hero_delete'),
     
 ##    path('', include('workshop.urls')),
 #    path('', include('blog.urls')),

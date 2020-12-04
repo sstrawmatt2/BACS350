@@ -1,16 +1,24 @@
   
 {% extends 'blog_theme.html' %}
-
+<title>Hero News</title>
 {% block main %}
+    
  
      <a href="{% url 'post_add' %}">Add New Article</a>
+     <a href="/hero_list" class="btn btn-primary">Hero Gallery</a>
+<!--     <a href="/post_add" class="btn btn-primary">ADD</a>-->
+       
       {% for post in object_list %}
-            <div class="post-entry">
+         <div class="container text-center ">  
+           <div class="card text-dark col-lg-12 my-3 p-2">  
+                <div class="post-entry">
                  
-                  <h2><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></h2>
-                  <p>{{ post.body }}</p>
+                      <h2><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></h2>
+                      <p>{{ post.body }}</p>
                   
+                </div>
             </div>
+        </div>
       {% endfor %}
   
 {% endblock main %}

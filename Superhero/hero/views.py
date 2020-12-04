@@ -52,20 +52,15 @@ class HeroEditView(LoginRequiredMixin, UpdateView):
 #        return kwargs
 
 class HeroListView(ListView):
-    template_name = "hero_list.html"
+    template_name = 'hero_list.html'
     model = Superhero
     
     
 class HeroDeleteView(LoginRequiredMixin, DeleteView):
-    template_name = "hero_delete.html"
+    template_name = 'hero_delete.html'
     model = Superhero
     success_url = reverse_lazy('hero_list')
     
-#    def test_delete_function(self):
-#        obj = self.get_object()
-#        return obj.author == self.request.user
-
-
 
 class CardView(TemplateView):
     template_name = 'hero_card.html'
